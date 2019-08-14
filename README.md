@@ -43,6 +43,7 @@ MPL 2.0
 
 ## Author
 
+- Changes - EalgeStar11
 - talkiepi - [Daniel Chote](https://github.com/dchote)
 - Barnard,Gumble Author - Tim Cooper (<tim.cooper@layeh.com>)
 
