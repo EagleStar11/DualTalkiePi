@@ -15,12 +15,13 @@ import (
 
 func main() {
 	// Command line flags
-	server := flag.String("server", "talkiepi.projectable.me:64738", "the server to connect to")
-	username := flag.String("username", "", "the username of the client")
+	server := flag.String("server", "192.168.15.10:64738", "the server to connect to")
+	username := flag.String("username", "Andi", "the username of the client")
 	password := flag.String("password", "", "the password of the server")
 	insecure := flag.Bool("insecure", true, "skip server certificate verification")
 	certificate := flag.String("certificate", "", "PEM encoded certificate and private key")
-	channel := flag.String("channel", "talkiepi", "mumble channel to join by default")
+	channel := flag.String("channel", "TestGruppe1", "mumble channel to join by default")
+	button := flag.Uint("channel", 25, "transmit button")
 
 	flag.Parse()
 
@@ -29,6 +30,7 @@ func main() {
 		Config:      gumble.NewConfig(),
 		Address:     *server,
 		ChannelName: *channel,
+		ButtonPin:   *button
 	}
 
 	// if no username specified, lets just autogen a random one
