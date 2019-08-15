@@ -34,6 +34,7 @@ type Talkiepi struct {
 	OnlineLED       gpio.Pin
 	ParticipantsLED gpio.Pin
 	TransmitLED     gpio.Pin
+	ButtonPin	uint
 	Button          gpio.Pin
 	ButtonState     uint
 }
