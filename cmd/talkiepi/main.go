@@ -21,7 +21,7 @@ func main() {
 	insecure := flag.Bool("insecure", true, "skip server certificate verification")
 	certificate := flag.String("certificate", "", "PEM encoded certificate and private key")
 	channel := flag.String("channel", "TestGruppe1", "mumble channel to join by default")
-	button := flag.Uint("channel", 25, "transmit button")
+	buttonpin := flag.Uint("buttonpin", 25, "GPIO-pin for transmit button")
 
 	flag.Parse()
 
@@ -30,7 +30,7 @@ func main() {
 		Config:      gumble.NewConfig(),
 		Address:     *server,
 		ChannelName: *channel,
-		ButtonPin:   *button
+		ButtonPin:   *buttonpin
 	}
 
 	// if no username specified, lets just autogen a random one
